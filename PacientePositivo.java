@@ -24,7 +24,10 @@ public class PacientePositivo extends Personas {
   //
   // Constructors
   //
-  public PacientePositivo () { };
+  public PacientePositivo (String nombre, int cedula, int edad, String telefonos, String correoElectronico, String lugarDeResidencia, SintomasCovid sintoma) 
+  { 
+    
+  };
   
   //
   // Methods

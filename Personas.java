@@ -9,18 +9,21 @@ abstract public class Personas {
   // Fields
   //
 
-  private String nombre;
-  private int cedula;
-  private int edad;
-  private int telefonos_;
-  private String correoElectronico;
-  private String lugarDeResidencia;
-  private SintomasCovid sintoma;
+  protected String nombre;
+  protected int cedula;
+  protected int edad;
+  protected int telefonos_;
+  protected String correoElectronico;
+  protected String lugarDeResidencia;
+  protected SintomasCovid sintoma;
   
   //
   // Constructors
   //
-  public Personas () { };
+  public Personas () 
+  { 
+
+  };
   
   //
   // Methods

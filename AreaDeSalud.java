@@ -1,4 +1,5 @@
-
+import java.util.LinkedList;
+import java.util.List;
 
 /**
  * Class AreaDeSalud
@@ -14,7 +15,7 @@ public class AreaDeSalud {
    */
   private String nombre;
   private String personaDirectora;
-  private int numerotelefonico_;
+  private int[] numerostelefonicos;
   private String direccion;
   private String areaDeAtraccion;
   private Personas pacientes;
@@ -22,7 +23,13 @@ public class AreaDeSalud {
   //
   // Constructors
   //
-  public AreaDeSalud () { };
+  public AreaDeSalud (String nombre, String personaDirectora, int numerotelefonico, String direccion, String areaDeAtraccion, Personas pacientes,int[] numerostelefonicos) 
+  { 
+    this.areaDeAtraccion=areaDeAtraccion; 
+    this.numerostelefonicos = numerostelefonicos;
+
+    
+  };
   
   //
   // Methods
@@ -71,17 +78,18 @@ public class AreaDeSalud {
    * Set the value of numerotelefonico_
    * @param newVar the new value of numerotelefonico_
    */
-  public void setNumerotelefonico_ (int newVar) {
-    numerotelefonico_ = newVar;
+  public void setNumerostelefonicos(int[] numerostelefonicos) {
+      this.numerostelefonicos = numerostelefonicos;
   }
+
 
   /**
    * Get the value of numerotelefonico_
    * @return the value of numerotelefonico_
    */
-  public int getNumerotelefonico_ () {
-    return numerotelefonico_;
-  }
+ public int[] getNumerostelefonicos() {
+     return numerostelefonicos;
+ }
 
   /**
    * Set the value of direccion
