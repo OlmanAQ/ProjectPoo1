@@ -96,6 +96,7 @@ public void setNumerosTelefonicos(int[] numerosTelefonicos) {
    */
   public void setDireccion (String newVar) {
     direccion = newVar;
+    
   }
 
   /**
