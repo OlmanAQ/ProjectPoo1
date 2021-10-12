@@ -137,7 +137,7 @@ public class Logica
     
             String cedula=console.readLine("%s","Cédula del paciente: ");
             String nombre=console.readLine("%s","Nombre del paciente: ");
-            short edad=0;
+            int edad=0;
             try
             {
                 edad=Short.parseShort(console.readLine("%s","Edad del paciente: "));

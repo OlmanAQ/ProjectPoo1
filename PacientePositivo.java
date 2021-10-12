@@ -24,7 +24,7 @@ public class PacientePositivo extends Personas {
   //
   // Constructors
   //
-  public PacientePositivo(String nombre, int cedula,int edad,String correoElectronico,String lugarDeResidencia,String fechaAparicionSintomas,String modoDeContacto ) {
+  public PacientePositivo(String nombre, String cedula,int edad,String correoElectronico,String lugarDeResidencia,String fechaAparicionSintomas,String modoDeContacto ) {
       this.nombre=nombre;
       this.cedula=cedula;
       this.edad=edad;

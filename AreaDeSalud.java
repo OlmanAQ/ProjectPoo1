@@ -27,6 +27,7 @@ public class AreaDeSalud {
     this.nombre= nombre;
     this.personaDirectora=personaDirectora;
     this.direccion=direccion;
+    this.areaDeAtraccion=areaDeAtraccion;
   
   };
   //
@@ -157,7 +158,7 @@ public Vector<Personas> getPacientes() {
 		pacientes.add(new_object);
 	}
 
-	public void registrarPacientePositivo (String nombre, int cedula,int edad,String correoElectronico,String lugarDeResidencia,String fechaAparicionSintomas,String modoDeContacto)
+	public void registrarPacientePositivo (String nombre, String cedula,int edad,String correoElectronico,String lugarDeResidencia,String fechaAparicionSintomas,String modoDeContacto)
 	{
 	    PacientePositivo nuevoPaciente = new PacientePositivo(nombre, cedula,edad,correoElectronico,lugarDeResidencia, fechaAparicionSintomas,modoDeContacto);
       nuevoPaciente.setAreaSalud(this);
@@ -175,5 +176,12 @@ public Vector<Personas> getPacientes() {
 			}
 		}
 		return cont;
+	}
+
+  public String toString()
+	{
+		return(String.format("Nombre: %s\nDirector: %s\nCorreo Electrónico: %s\nDirección: %s\nÁrea de Atracción: %s\n", 
+			this.nombre,this.personaDirectora,this.direccion,this.areaDeAtraccion));
+
 	}
 }

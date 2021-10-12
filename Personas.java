@@ -9,7 +9,7 @@ abstract public class Personas {
   //
 
   protected String nombre;
-  protected int cedula;
+  protected String cedula;
   protected int edad;
   protected int [] numerosTelefonicos;
   protected String correoElectronico;
@@ -53,7 +53,7 @@ abstract public class Personas {
    * Set the value of cedula
    * @param newVar the new value of cedula
    */
-  public void setCedula (int newVar) {
+  public void setCedula (String newVar) {
     cedula = newVar;
   }
 
@@ -61,7 +61,7 @@ abstract public class Personas {
    * Get the value of cedula
    * @return the value of cedula
    */
-  public int getCedula () {
+  public String getCedula () {
     return cedula;
   }
 
