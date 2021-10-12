@@ -7,7 +7,7 @@ abstract public class Personas {
   //
   // Fields
   //
-
+  //nombre de la persona
   protected String nombre;
   protected String cedula;
   protected int edad;
