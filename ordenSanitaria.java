@@ -5,7 +5,7 @@ import java.util.*;
 /**
  * Class ordenSanitaria
  */
-public class ordenSanitaria {
+public class OrdenSanitaria {
 
   //
   // Fields
@@ -23,7 +23,7 @@ public class ordenSanitaria {
   //
   // Constructors
   //
-  public ordenSanitaria () { };
+  public OrdenSanitaria () { };
   
   //
   // Methods
@@ -133,14 +133,14 @@ public class ordenSanitaria {
   /**
    * Add a Ampliacion object to the ampliacionVector List
    */
-  public void addAmpliacion (ampliacionDeOrdenSanitaria new_object) {
+  public void addAmpliacion (AmpliacionDeOrdenSanitaria new_object) {
     ampliacionVector.add(new_object);
   }
 
   /**
    * Remove a Ampliacion object from ampliacionVector List
    */
-  public void removeAmpliacion (ampliacionDeOrdenSanitaria new_object)
+  public void removeAmpliacion (AmpliacionDeOrdenSanitaria new_object)
   {
     ampliacionVector.remove(new_object);
   }

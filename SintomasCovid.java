@@ -10,7 +10,7 @@ public class SintomasCovid {
   //
 
   private String sintoma;
-  private infecciones infeccion;
+  private Infecciones infeccion;
   
   //
   // Constructors
@@ -46,7 +46,7 @@ public class SintomasCovid {
    * Set the value of infeccion
    * @param newVar the new value of infeccion
    */
-  public void setInfeccion (infecciones newVar) {
+  public void setInfeccion (Infecciones newVar) {
     infeccion = newVar;
   }
 
@@ -54,7 +54,7 @@ public class SintomasCovid {
    * Get the value of infeccion
    * @return the value of infeccion
    */
-  public infecciones getInfeccion () {
+  public Infecciones getInfeccion () {
     return infeccion;
   }
 
