@@ -182,7 +182,6 @@ public Vector<Personas> getPacientes() {
 
   public String toString()
 	{
-    
 		return(String.format("Nombre: %s\nDirector: %s\nDirección: %s\nÁrea de Atracción: %s\n", 
 			this.nombre,this.personaDirectora,this.direccion,this.areaDeAtraccion));
 
