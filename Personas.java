@@ -4,7 +4,6 @@
  * Class Personas
  */
 abstract public class Personas {
-
   //
   // Fields
   //
@@ -12,17 +11,17 @@ abstract public class Personas {
   protected String nombre;
   protected int cedula;
   protected int edad;
-  protected int telefonos_;
+  protected int [] numerosTelefonicos;
   protected String correoElectronico;
   protected String lugarDeResidencia;
   protected SintomasCovid sintoma;
+
+  public AreaDeSalud m_areaSalud;
   
   //
   // Constructors
-  //
-  public Personas () 
-  { 
-
+  // NO SE HA AGREGADO NUMEROS TELEFONICOS NI SINTOMAS AL CONSTRUCTOR 
+  public Personas ( ) { 
   };
   
   //
@@ -86,18 +85,16 @@ abstract public class Personas {
    * Set the value of telefonos_
    * @param newVar the new value of telefonos_
    */
-  public void setTelefonos_ (int newVar) {
-    telefonos_ = newVar;
-  }
-
+public void setNumerosTelefonicos(int[] numerosTelefonicos) {
+       this.numerosTelefonicos = numerosTelefonicos;
+}
   /**
    * Get the value of telefonos_
    * @return the value of telefonos_
    */
-  public int getTelefonos_ () {
-    return telefonos_;
-  }
-
+public int[] getNumerosTelefonicos() {
+       return numerosTelefonicos;
+}
   /**
    * Set the value of correoElectronico
    * @param newVar the new value of correoElectronico
@@ -202,6 +199,14 @@ abstract public class Personas {
   {
     return "";
   }
+
+  	/**
+	 * @return       String
+	 */
+	public String obtenerEstado()
+	{
+		return this.getClass().getName();
+	}
 
 
 }

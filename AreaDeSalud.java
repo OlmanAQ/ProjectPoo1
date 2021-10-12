@@ -1,6 +1,6 @@
-import java.util.LinkedList;
-import java.util.List;
 
+import java.util.*;
+import java.util.List;
 /**
  * Class AreaDeSalud
  */
@@ -15,22 +15,20 @@ public class AreaDeSalud {
    */
   private String nombre;
   private String personaDirectora;
-  private int[] numerostelefonicos;
+  private int [] numerosTelefonicos;
   private String direccion;
   private String areaDeAtraccion;
-  private Personas pacientes;
+  public Vector<Personas> pacientes = new Vector<Personas>();
   
   //
   // Constructors
   //
-  public AreaDeSalud (String nombre, String personaDirectora, int numerotelefonico, String direccion, String areaDeAtraccion, Personas pacientes,int[] numerostelefonicos) 
-  { 
-    this.areaDeAtraccion=areaDeAtraccion; 
-    this.numerostelefonicos = numerostelefonicos;
-
-    
-  };
+  public AreaDeSalud(String nombre, String personaDirectora,String direccion, String areaDeAtraccion) {
+    this.nombre= nombre;
+    this.personaDirectora=personaDirectora;
+    this.direccion=direccion;
   
+  };
   //
   // Methods
   //
@@ -39,6 +37,9 @@ public class AreaDeSalud {
   //
   // Accessor methods
   //
+
+
+
 
   /**
    * Set the value of nombre
@@ -78,18 +79,15 @@ public class AreaDeSalud {
    * Set the value of numerotelefonico_
    * @param newVar the new value of numerotelefonico_
    */
-  public void setNumerostelefonicos(int[] numerostelefonicos) {
-      this.numerostelefonicos = numerostelefonicos;
-  }
+public int[] getNumerosTelefonicos() {
+  return numerosTelefonicos;
+}
+
+public void setNumerosTelefonicos(int[] numerosTelefonicos) {
+  this.numerosTelefonicos = numerosTelefonicos;
+}
 
 
-  /**
-   * Get the value of numerotelefonico_
-   * @return the value of numerotelefonico_
-   */
- public int[] getNumerostelefonicos() {
-     return numerostelefonicos;
- }
 
   /**
    * Set the value of direccion
@@ -127,17 +125,19 @@ public class AreaDeSalud {
    * Set the value of pacientes
    * @param newVar the new value of pacientes
    */
-  public void setPacientes (Personas newVar) {
-    pacientes = newVar;
-  }
+ public void setPacientes(Vector<Personas> pacientes) {
+        this.pacientes = pacientes;
+ }
 
   /**
    * Get the value of pacientes
    * @return the value of pacientes
    */
-  public Personas getPacientes () {
-    return pacientes;
-  }
+public Vector<Personas> getPacientes() {
+       return pacientes;
+}
+
+
 
   //
   // Other methods
@@ -150,6 +150,30 @@ public class AreaDeSalud {
     
     return "";
   }
+  	/**
+	 * Add a Personas object to the personasVector List
+	 */
+	public void addPersonas (Personas new_object) {
+		pacientes.add(new_object);
+	}
 
+	public void registrarPacientePositivo (String nombre, int cedula,int edad,String correoElectronico,String lugarDeResidencia,String fechaAparicionSintomas,String modoDeContacto)
+	{
+	    PacientePositivo nuevoPaciente = new PacientePositivo(nombre, cedula,edad,correoElectronico,lugarDeResidencia, fechaAparicionSintomas,modoDeContacto);
+      nuevoPaciente.setAreaSalud(this);
+      this.addPersonas(nuevoPaciente);
+	}
 
+	public Integer cantidadPositivos()
+	{
+		int cont=0;
+		for (int x=0;x<this.pacientes.size();x++)
+		{
+			if (this.pacientes.get(x).obtenerEstado().equals("PacientesPositivos"))
+			{
+				cont++;
+			}
+		}
+		return cont;
+	}
 }
