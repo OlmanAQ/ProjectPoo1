@@ -170,7 +170,7 @@ public Vector<Personas> getPacientes() {
 		int cont=0;
 		for (int x=0;x<this.pacientes.size();x++)
 		{
-			if (this.pacientes.get(x).obtenerEstado().equals("PacientesPositivos"))
+			if (this.pacientes.get(x).obtenerEstado().equals("PacientePositivo"))
 			{
 				cont++;
 			}
@@ -180,7 +180,7 @@ public Vector<Personas> getPacientes() {
 
   public String toString()
 	{
-		return(String.format("Nombre: %s\nDirector:  %s\nDirección: %s\nÁrea de Atracción: %s\n", 
+		return(String.format("Nombre: %s\nDirector: %s\nDirección: %s\nÁrea de Atracción: %s\n", 
 			this.nombre,this.personaDirectora,this.direccion,this.areaDeAtraccion));
 
 	}

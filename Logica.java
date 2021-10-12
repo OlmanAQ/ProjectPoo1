@@ -146,9 +146,9 @@ public class Logica
             {
                 System.out.println(String.format("Error de conversión de la edad, se asume 0. %s",e.getMessage()));
             }
-            String padecimientos=console.readLine("%s","Padecimiento: ");
+            //String padecimientos=console.readLine("%s","Padecimiento: ");
             String lugarResidencia=console.readLine("%s","Lugar de residencia: ");
-            String telefonos=console.readLine("%s","Números de teléfono: ");
+            //String telefonos=console.readLine("%s","Números de teléfono: ");
             String correo=console.readLine("%s","E-mail del paciente: ");
             String fechaSintomas=console.readLine("%s","Fecha en que iniciaron los síntomas: ");
             String modoDeContacto=console.readLine("%s","modo de contacto: ");
