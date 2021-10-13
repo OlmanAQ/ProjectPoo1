@@ -1,6 +1,5 @@
 
 import java.util.*;
-import java.util.List;
 /**
  * Class AreaDeSalud
  */
@@ -15,19 +14,20 @@ public class AreaDeSalud {
    */
   private String nombre;
   private String personaDirectora;
-  private int [] numerosTelefonicos;
   private String direccion;
+  private ArrayList<String> numeroTelefonico;
   private String areaDeAtraccion;
   public Vector<Personas> pacientes = new Vector<Personas>();
   
   //
   // Constructors
   //
-  public AreaDeSalud(String nombre, String personaDirectora,String direccion, String areaDeAtraccion) {
+  public AreaDeSalud(String nombre, String personaDirectora,String direccion, String areaDeAtraccion,ArrayList<String> numeroTelefonico) {
     this.nombre= nombre;
     this.personaDirectora=personaDirectora;
     this.direccion=direccion;
     this.areaDeAtraccion=areaDeAtraccion;
+    this.numeroTelefonico=numeroTelefonico;
   
   };
   //
@@ -80,14 +80,6 @@ public class AreaDeSalud {
    * Set the value of numerotelefonico_
    * @param newVar the new value of numerotelefonico_
    */
-public int[] getNumerosTelefonicos() {
-  return numerosTelefonicos;
-}
-
-public void setNumerosTelefonicos(int[] numerosTelefonicos) {
-  this.numerosTelefonicos = numerosTelefonicos;
-}
-
 
 
   /**
@@ -138,7 +130,10 @@ public void setNumerosTelefonicos(int[] numerosTelefonicos) {
 public Vector<Personas> getPacientes() {
        return pacientes;
 }
-
+public ArrayList<String> getNumeroTelefonico() {
+ 
+  return getNumeroTelefonico();
+}
 
 
   //
@@ -158,14 +153,22 @@ public Vector<Personas> getPacientes() {
 	public void addPersonas (Personas new_object) {
 		pacientes.add(new_object);
 	}
-
-	public void registrarPacientePositivo (String nombre, String cedula,int edad,String correoElectronico,String lugarDeResidencia,String fechaAparicionSintomas,String modoDeContacto)
+//Registra los pacientes positivos
+	public void registrarPacientePositivo (String nombre, String cedula,int edad,String correoElectronico,String lugarDeResidencia,String fechaAparicionSintomas,String modoDeContacto,ArrayList<String> numeroTelefonico)
 	{
-	    PacientePositivo nuevoPaciente = new PacientePositivo(nombre, cedula,edad,correoElectronico,lugarDeResidencia, fechaAparicionSintomas,modoDeContacto);
+	    PacientePositivo nuevoPaciente = new PacientePositivo(nombre, cedula,edad,correoElectronico,lugarDeResidencia, fechaAparicionSintomas,modoDeContacto, numeroTelefonico);
       nuevoPaciente.setAreaSalud(this);
       this.addPersonas(nuevoPaciente);
 	}
+//registra las personas que se realizaron la prueba salga o no positivo
+public void registrarPaciente (String nombre, String cedula,int edad,String correoElectronico,String lugarDeResidencia,String horaDeaplicacion)
+{
+    Paciente nuevoPaciente = new Paciente(nombre, cedula,edad,correoElectronico,lugarDeResidencia,horaDeaplicacion);
+    nuevoPaciente.setAreaSalud(this);
+    this.addPersonas(nuevoPaciente);
+}
 
+//cuenta la cantidad de personas positivas en un centro en especfico
 	public Integer cantidadPositivos()
 	{
 		int cont=0;
@@ -182,8 +185,8 @@ public Vector<Personas> getPacientes() {
 
   public String toString()
 	{
-		return(String.format("Nombre: %s\nDirector: %s\nDirección: %s\nÁrea de Atracción: %s\n", 
-			this.nombre,this.personaDirectora,this.direccion,this.areaDeAtraccion));
+		return(String.format("Nombre: %s\nDirector: %s\nDirección: %s\nÁrea de Atracción: %s\nNumeros telefonicos: %s", 
+			this.nombre,this.personaDirectora,this.direccion,this.areaDeAtraccion, this.numeroTelefonico));
 
 	}
 }
