@@ -1,3 +1,5 @@
+import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Vector;
 import java.io.Console;
 
@@ -18,6 +20,7 @@ public class Logica
             System.out.println("1) Crear una nueva área de salud");
             System.out.println("2) Registrar un nuevo paciente positivo");
             System.out.println("3) Cantidad de pacientes positivos por área de salud");
+
             System.out.println("4) Salir ");
             input=console.readLine("%s","Que acción desea realizar: ");
             if (input.equals("1"))
@@ -79,10 +82,29 @@ public class Logica
         String director=console.readLine("%s","Nombre del director: ");
         String direccion=console.readLine("%s","Dirección física: ");
         String areaDeAtraccion=console.readLine("%s","Nombre del área de atracción: ");
- 
+        ArrayList<String>numeroTelefonico= new ArrayList<>(Arrays.asList());
+        while(true){
+           System.out.print("\033[H\033[2J"); 
+           System.out.println("1)Ingresar numero telefonico ");
+           System.out.println("2)No ingresar mas numeros ");
+           input=console.readLine("%s","Que acción desea realizar: ");
+           if (input.equals("1"))
+           {    
+              
+               String numero=console.readLine("%s","Numero telefonico: ");
+               numeroTelefonico.add(numero);
+            
+           }
+           else if (input.equals("2"))
+           {
+              break;
+           }
+
+
+       }
         
         System.out.print("\033[H\033[2J");
-        AreaDeSalud nAS = new AreaDeSalud(nombreAS,director, direccion, areaDeAtraccion);
+        AreaDeSalud nAS = new AreaDeSalud(nombreAS,director, direccion, areaDeAtraccion,numeroTelefonico);
         System.out.println("1) Esta seguro que quiere registrar el área de salud:");
         System.out.println(nAS.toString());
         System.out.println("2) No realizar el registro y regresar al menu principal");
@@ -148,13 +170,37 @@ public class Logica
             }
             //String padecimientos=console.readLine("%s","Padecimiento: ");
             String lugarResidencia=console.readLine("%s","Lugar de residencia: ");
-            //String telefonos=console.readLine("%s","Números de teléfono: ");
+           
             String correo=console.readLine("%s","E-mail del paciente: ");
             String fechaSintomas=console.readLine("%s","Fecha en que iniciaron los síntomas: ");
             String modoDeContacto=console.readLine("%s","modo de contacto: ");
-            as.registrarPacientePositivo(nombre, cedula,edad,correo,lugarResidencia, fechaSintomas,modoDeContacto);
-    
+            ArrayList<String>numeroTelefonico= new ArrayList<>(Arrays.asList());
+            while(true){
+                 System.out.print("\033[H\033[2J"); 
+                System.out.println("1)Ingresar numero telefonico ");
+                System.out.println("2)No ingresar mas numeros ");
+                input=console.readLine("%s","Que acción desea realizar: ");
+                if (input.equals("1"))
+                {    
+                   
+                    String numero=console.readLine("%s","Numero telefonico: ");
+                    numeroTelefonico.add(numero);
+                 
+                }
+                else if (input.equals("2"))
+                {
+                   break;
+                }
+
+
+            }
+         //imprime datos del paciente positivo
+            as.registrarPacientePositivo(nombre, cedula,edad,correo,lugarResidencia, fechaSintomas,modoDeContacto,numeroTelefonico);
+            PacientePositivo nPP = new PacientePositivo(nombre, cedula,edad,correo,lugarResidencia, fechaSintomas,modoDeContacto,numeroTelefonico);
+            
+
             System.out.print("\033[H\033[2J");
+            System.out.println(nPP.toString());
             System.out.println(String.format("Se ha registrado al paciente %s %s al centro de Salud %s", cedula,nombre,as.getNombre()));
     
             System.out.println("\nPresione enter para regresar al menú principal...");

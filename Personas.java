@@ -1,4 +1,4 @@
-
+import java.util.ArrayList;
 
 /**
  * Class Personas
@@ -11,8 +11,8 @@ abstract public class Personas {
   protected String nombre;
   protected String cedula;
   protected int edad;
-  protected int [] numerosTelefonicos;
   protected String correoElectronico;
+  protected ArrayList<String> numeroTelefonico;
   protected String lugarDeResidencia;
   protected SintomasCovid sintoma;
 
@@ -85,16 +85,7 @@ abstract public class Personas {
    * Set the value of telefonos_
    * @param newVar the new value of telefonos_
    */
-public void setNumerosTelefonicos(int[] numerosTelefonicos) {
-       this.numerosTelefonicos = numerosTelefonicos;
-}
-  /**
-   * Get the value of telefonos_
-   * @return the value of telefonos_
-   */
-public int[] getNumerosTelefonicos() {
-       return numerosTelefonicos;
-}
+
   /**
    * Set the value of correoElectronico
    * @param newVar the new value of correoElectronico
@@ -156,14 +147,6 @@ public int[] getNumerosTelefonicos() {
   }
 
 
-  /**
-   * @return       int
-   */
-  public int addtelefonos()
-  {
-    return 1;
-  }
-
 
   /**
    * @return       String
@@ -208,5 +191,9 @@ public int[] getNumerosTelefonicos() {
 		return this.getClass().getName();
 	}
 
+  public ArrayList<String> getNumeroTelefonico() {
+         return numeroTelefonico;
+  }
+  
 
 }

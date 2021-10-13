@@ -1,3 +1,4 @@
+import java.util.ArrayList;
 
 //import java.util.*;
 
@@ -16,7 +17,6 @@ public class PacientePositivo extends Personas {
    */
   private String fechaAparicionSintomas;
   private String modoDeContacto;
-
  // public Vector infeccionVector = new Vector();
 
  // public Vector contactoVector = new Vector();
@@ -24,13 +24,14 @@ public class PacientePositivo extends Personas {
   //
   // Constructors
   //
-  public PacientePositivo(String nombre, String cedula,int edad,String correoElectronico,String lugarDeResidencia,String fechaAparicionSintomas,String modoDeContacto ) {
+  public PacientePositivo(String nombre, String cedula,int edad,String correoElectronico,String lugarDeResidencia,String fechaAparicionSintomas,String modoDeContacto,ArrayList<String> numeroTelefonico) {
       this.nombre=nombre;
       this.cedula=cedula;
       this.edad=edad;
       this.correoElectronico=correoElectronico;
       this.lugarDeResidencia=lugarDeResidencia;
       this.modoDeContacto=modoDeContacto;
+      this.numeroTelefonico=numeroTelefonico;
    };
   
   //
@@ -139,8 +140,20 @@ public class PacientePositivo extends Personas {
 		return m_areaSalud;
 	}
 
+
+public ArrayList<String> getNumeroTelefonico() {
+ 
+  return getNumeroTelefonico();
+}
+
   //
   // Other methods
   //
+  public String toString()
+	{
+		return(String.format("Nombre: %s\nCedula: %s\nEdad: %s\nCorreo electronico: %s\nLugar de residencia: %s\nNumeros Telefonicos: %s", 
+			this.nombre,this.cedula,this.edad,this.correoElectronico,this.lugarDeResidencia,this.numeroTelefonico));
+
+	}
 
 }

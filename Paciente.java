@@ -11,16 +11,23 @@ public class Paciente extends Personas {
   // Fields
   //
 
-  private String padecimientosCronicos_;
+  private String [] padecimientosCronicos;
   private String horaDeaplicacion;
 
-  public Vector pruebaVector = new Vector();
+  public ArrayList<pruebasCOVID19> prueba = new ArrayList<>();
   
   //
   // Constructors
   //
-  public Paciente () { };
   
+  public Paciente(String nombre, String cedula,int edad,String correoElectronico,String lugarDeResidencia, String horaDeaplicacion) {
+    this.nombre=nombre;
+    this.cedula=cedula;
+    this.edad=edad;
+    this.correoElectronico=correoElectronico;
+    this.lugarDeResidencia=lugarDeResidencia;
+    
+ };
   //
   // Methods
   //
@@ -34,17 +41,17 @@ public class Paciente extends Personas {
    * Set the value of padecimientosCronicos_
    * @param newVar the new value of padecimientosCronicos_
    */
-  public void setPadecimientosCronicos_ (String newVar) {
-    padecimientosCronicos_ = newVar;
-  }
+public void setPadecimientosCronicos(String[] padecimientosCronicos) {
+       this.padecimientosCronicos = padecimientosCronicos;
+}
 
   /**
    * Get the value of padecimientosCronicos_
    * @return the value of padecimientosCronicos_
    */
-  public String getPadecimientosCronicos_ () {
-    return padecimientosCronicos_;
-  }
+public String[] getPadecimientosCronicos() {
+       return padecimientosCronicos;
+}
 
   /**
    * Set the value of horaDeaplicacion
@@ -63,10 +70,10 @@ public class Paciente extends Personas {
   }
 
   /**
-   * Add a Prueba object to the pruebaVector List
+   * Add a Prueba object to the prueba List
    */
-  public void addPrueba (pruebasCOVID19 new_object) {
-    pruebaVector.add(new_object);
+  public void addPrueba (pruebasCOVID19 pruebas) {
+    prueba.add(pruebas);
   }
 
   /**
@@ -74,16 +81,12 @@ public class Paciente extends Personas {
    */
   public void removePrueba (pruebasCOVID19 new_object)
   {
-    pruebaVector.remove(new_object);
+    prueba.remove(new_object);
   }
 
-  /**
-   * Get the List of Prueba objects held by pruebaVector
-   * @return List of Prueba objects held by pruebaVector
-   */
-  public List getPruebaList () {
-    return (List) pruebaVector;
-  }
+public ArrayList<pruebasCOVID19> getPrueba() {
+       return prueba;
+}
 
 
   //
@@ -98,6 +101,17 @@ public class Paciente extends Personas {
   {
     return "";
   }
+  
+	public void setAreaSalud (AreaDeSalud newVar) {
+		m_areaSalud = newVar;
+	}
 
+	/**
+	 * Get the value of m_areaSalud
+	 * @return the value of m_areaSalud
+	 */
+	public AreaDeSalud getAreaSalud () {
+		return m_areaSalud;
+	}
 
 }
