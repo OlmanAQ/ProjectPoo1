@@ -65,14 +65,14 @@ public class Paciente extends Personas {
   /**
    * Add a Prueba object to the pruebaVector List
    */
-  public void addPrueba (pruebasCOVID19 new_object) {
+  public void addPrueba (PruebasCOVID19 new_object) {
     pruebaVector.add(new_object);
   }
 
   /**
    * Remove a Prueba object from pruebaVector List
    */
-  public void removePrueba (pruebasCOVID19 new_object)
+  public void removePrueba (PruebasCOVID19 new_object)
   {
     pruebaVector.remove(new_object);
   }

@@ -17,7 +17,10 @@ public class Infecciones {
   //
   // Constructors
   //
-  public Infecciones () { };
+  public Infecciones () 
+  { 
+    
+  };
   
   //
   // Methods

@@ -24,7 +24,7 @@ public class Contactos extends Personas {
     this.edad=edad;
     this.correoElectronico=correoElectronico;
     this.lugarDeResidencia=lugarDeResidencia;
-    this.gradoDeContacto= gradoDeContacto;
+    this.gradoDeContacto=gradoDeContacto;
   };
   
   //

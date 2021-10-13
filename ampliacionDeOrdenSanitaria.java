@@ -20,7 +20,10 @@ public class AmpliacionDeOrdenSanitaria {
   //
   // Constructors
   //
-  public AmpliacionDeOrdenSanitaria () { };
+  public AmpliacionDeOrdenSanitaria () 
+  { 
+    
+  };
   
   //
   // Methods

@@ -18,12 +18,16 @@ public class OrdenSanitaria {
   private Contactos contacto;
   private PacientePositivo pacientePositivo;
 
-  public Vector ampliacionVector = new Vector();
+  public Vector AmpliacionVector = new Vector();
   
   //
   // Constructors
   //
-  public OrdenSanitaria () { };
+  public OrdenSanitaria (String fechaDeEmision, String fechaDeFinalizacion, String motivo, String nombreDelFuncionario, Contactos contacto, PacientePositivo pacientePositivo) 
+  { 
+
+
+  };
   
   //
   // Methods
@@ -134,7 +138,7 @@ public class OrdenSanitaria {
    * Add a Ampliacion object to the ampliacionVector List
    */
   public void addAmpliacion (AmpliacionDeOrdenSanitaria new_object) {
-    ampliacionVector.add(new_object);
+    AmpliacionVector.add(new_object);
   }
 
   /**
@@ -142,7 +146,7 @@ public class OrdenSanitaria {
    */
   public void removeAmpliacion (AmpliacionDeOrdenSanitaria new_object)
   {
-    ampliacionVector.remove(new_object);
+    AmpliacionVector.remove(new_object);
   }
 
   /**
@@ -150,7 +154,7 @@ public class OrdenSanitaria {
    * @return List of Ampliacion objects held by ampliacionVector
    */
   public List getAmpliacionList () {
-    return (List) ampliacionVector;
+    return (List) AmpliacionVector;
   }
 
 
