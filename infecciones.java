@@ -17,9 +17,11 @@ public class Infecciones {
   //
   // Constructors
   //
-  public Infecciones () 
+  public Infecciones (String fechaDeContagio, String fechaDeAlta, String descripcionGeneral, OrdenSanitaria orden) 
   { 
-    
+    this.fechaDeContagio=fechaDeContagio;
+    this.descripcionGeneral=descripcionGeneral;
+    this.orden=orden;
   };
   
   //
