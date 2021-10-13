@@ -24,7 +24,13 @@ public class OrdenSanitaria {
   // Constructors
   //
   public OrdenSanitaria (String fechaDeEmision, String fechaDeFinalizacion, String motivo, String nombreDelFuncionario, Contactos contacto, PacientePositivo pacientePositivo) 
-  { 
+  {
+    this.fechaDeEmision= fechaDeEmision;
+    this.fechaDeFinalizacion=fechaDeFinalizacion;
+    this.motivo=motivo;
+    this.nombreDelFuncionario=nombreDelFuncionario;
+    this.contacto=contacto;
+    this.pacientePositivo=pacientePositivo;
 
 
   };

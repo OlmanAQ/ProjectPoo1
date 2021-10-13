@@ -20,9 +20,12 @@ public class AmpliacionDeOrdenSanitaria {
   //
   // Constructors
   //
-  public AmpliacionDeOrdenSanitaria () 
-  { 
-    
+  public AmpliacionDeOrdenSanitaria (String nuevafechaInicio, String nuevaFechaFinalizacion, String motivo, OrdenSanitaria m_orden) 
+  {
+    this.nuevafechaInicio=nuevafechaInicio;
+    this.nuevaFechaFinalizacion=nuevaFechaFinalizacion;
+    this.motivo=motivo;
+    this.m_orden=m_orden;
   };
   
   //
