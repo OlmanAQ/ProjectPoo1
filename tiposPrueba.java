@@ -3,7 +3,7 @@
 /**
  * Class tiposPrueba
  */
-public class tiposPrueba {
+public class TiposPrueba {
 
   //
   // Fields
@@ -15,7 +15,7 @@ public class tiposPrueba {
   //
   // Constructors
   //
-  public tiposPrueba () { };
+  public TiposPrueba () { };
   
   //
   // Methods
