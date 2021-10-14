@@ -5,7 +5,7 @@ import java.util.*;
 /**
  * Class ampliacionDeOrdenSanitaria
  */
-public class ampliacionDeOrdenSanitaria {
+public class AmpliacionDeOrdenSanitaria {
 
   //
   // Fields
@@ -15,12 +15,18 @@ public class ampliacionDeOrdenSanitaria {
   private String nuevaFechaFinalizacion;
   private String motivo;
 
-  public ordenSanitaria m_orden;
+  public OrdenSanitaria m_orden;
   
   //
   // Constructors
   //
-  public ampliacionDeOrdenSanitaria () { };
+  public AmpliacionDeOrdenSanitaria (String nuevafechaInicio, String nuevaFechaFinalizacion, String motivo, OrdenSanitaria m_orden) 
+  {
+    this.nuevafechaInicio=nuevafechaInicio;
+    this.nuevaFechaFinalizacion=nuevaFechaFinalizacion;
+    this.motivo=motivo;
+    this.m_orden=m_orden;
+  };
   
   //
   // Methods
@@ -83,7 +89,7 @@ public class ampliacionDeOrdenSanitaria {
    * Set the value of m_orden
    * @param newVar the new value of m_orden
    */
-  public void setOrden (ordenSanitaria newVar) {
+  public void setOrden (OrdenSanitaria newVar) {
     m_orden = newVar;
   }
 
@@ -91,7 +97,7 @@ public class ampliacionDeOrdenSanitaria {
    * Get the value of m_orden
    * @return the value of m_orden
    */
-  public ordenSanitaria getOrden () {
+  public OrdenSanitaria getOrden () {
     return m_orden;
   }
 

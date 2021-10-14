@@ -5,7 +5,7 @@ import java.util.*;
 /**
  * Class pruebasCOVID19
  */
-public class pruebasCOVID19 {
+public class PruebasCOVID19 {
 
   //
   // Fields
@@ -23,7 +23,7 @@ public class pruebasCOVID19 {
   //
   // Constructors
   //
-  public pruebasCOVID19 () { };
+  public PruebasCOVID19 () { };
   
   //
   // Methods

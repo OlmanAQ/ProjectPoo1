@@ -5,7 +5,7 @@ import java.util.*;
 /**
  * Class ordenSanitaria
  */
-public class ordenSanitaria {
+public class OrdenSanitaria {
 
   //
   // Fields
@@ -18,12 +18,22 @@ public class ordenSanitaria {
   private Contactos contacto;
   private PacientePositivo pacientePositivo;
 
-  public Vector ampliacionVector = new Vector();
+  public Vector AmpliacionVector = new Vector();
   
   //
   // Constructors
   //
-  public ordenSanitaria () { };
+  public OrdenSanitaria (String fechaDeEmision, String fechaDeFinalizacion, String motivo, String nombreDelFuncionario, Contactos contacto, PacientePositivo pacientePositivo) 
+  {
+    this.fechaDeEmision= fechaDeEmision;
+    this.fechaDeFinalizacion=fechaDeFinalizacion;
+    this.motivo=motivo;
+    this.nombreDelFuncionario=nombreDelFuncionario;
+    this.contacto=contacto;
+    this.pacientePositivo=pacientePositivo;
+
+
+  };
   
   //
   // Methods
@@ -133,16 +143,16 @@ public class ordenSanitaria {
   /**
    * Add a Ampliacion object to the ampliacionVector List
    */
-  public void addAmpliacion (ampliacionDeOrdenSanitaria new_object) {
-    ampliacionVector.add(new_object);
+  public void addAmpliacion (AmpliacionDeOrdenSanitaria new_object) {
+    AmpliacionVector.add(new_object);
   }
 
   /**
    * Remove a Ampliacion object from ampliacionVector List
    */
-  public void removeAmpliacion (ampliacionDeOrdenSanitaria new_object)
+  public void removeAmpliacion (AmpliacionDeOrdenSanitaria new_object)
   {
-    ampliacionVector.remove(new_object);
+    AmpliacionVector.remove(new_object);
   }
 
   /**
@@ -150,7 +160,7 @@ public class ordenSanitaria {
    * @return List of Ampliacion objects held by ampliacionVector
    */
   public List getAmpliacionList () {
-    return (List) ampliacionVector;
+    return (List) AmpliacionVector;
   }
 
 

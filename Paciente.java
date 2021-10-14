@@ -13,7 +13,7 @@ public class Paciente extends Personas {
   
   private String horaDeaplicacion;
 
-  public ArrayList<pruebasCOVID19> prueba = new ArrayList<>();
+  public ArrayList<PruebasCOVID19> prueba = new ArrayList<>();
   
   //
   // Constructors
@@ -58,19 +58,19 @@ public class Paciente extends Personas {
   /**
    * Add a Prueba object to the prueba List
    */
-  public void addPrueba (pruebasCOVID19 pruebas) {
+  public void addPrueba (PruebasCOVID19 pruebas) {
     prueba.add(pruebas);
   }
 
   /**
    * Remove a Prueba object from pruebaVector List
    */
-  public void removePrueba (pruebasCOVID19 new_object)
+  public void removePrueba (PruebasCOVID19 new_object)
   {
     prueba.remove(new_object);
   }
 
-public ArrayList<pruebasCOVID19> getPrueba() {
+public ArrayList<PruebasCOVID19> getPrueba() {
        return prueba;
 }
 

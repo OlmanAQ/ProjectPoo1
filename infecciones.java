@@ -3,7 +3,7 @@
 /**
  * Class infecciones
  */
-public class infecciones {
+public class Infecciones {
 
   //
   // Fields
@@ -12,12 +12,17 @@ public class infecciones {
   private String fechaDeContagio;
   private String fechaDeAlta;
   private String descripcionGeneral;
-  private ordenSanitaria orden;
+  private OrdenSanitaria orden;
   
   //
   // Constructors
   //
-  public infecciones () { };
+  public Infecciones (String fechaDeContagio, String fechaDeAlta, String descripcionGeneral, OrdenSanitaria orden) 
+  { 
+    this.fechaDeContagio=fechaDeContagio;
+    this.descripcionGeneral=descripcionGeneral;
+    this.orden=orden;
+  };
   
   //
   // Methods
@@ -80,7 +85,7 @@ public class infecciones {
    * Set the value of orden
    * @param newVar the new value of orden
    */
-  public void setOrden (ordenSanitaria newVar) {
+  public void setOrden (OrdenSanitaria newVar) {
     orden = newVar;
   }
 
@@ -88,7 +93,7 @@ public class infecciones {
    * Get the value of orden
    * @return the value of orden
    */
-  public ordenSanitaria getOrden () {
+  public OrdenSanitaria getOrden () {
     return orden;
   }
 
