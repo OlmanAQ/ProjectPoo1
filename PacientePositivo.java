@@ -24,7 +24,7 @@ public class PacientePositivo extends Personas {
   //
   // Constructors
   //
-  public PacientePositivo(String nombre, String cedula,int edad,String correoElectronico,String lugarDeResidencia,String fechaAparicionSintomas,String modoDeContacto,ArrayList<String> numeroTelefonico) {
+  public PacientePositivo(String nombre, String cedula,int edad,String correoElectronico,String lugarDeResidencia,String fechaAparicionSintomas,String modoDeContacto,ArrayList<String> numeroTelefonico,ArrayList<String>padecimientosCronicos) {
       this.nombre=nombre;
       this.cedula=cedula;
       this.edad=edad;
@@ -32,6 +32,7 @@ public class PacientePositivo extends Personas {
       this.lugarDeResidencia=lugarDeResidencia;
       this.modoDeContacto=modoDeContacto;
       this.numeroTelefonico=numeroTelefonico;
+      this.padecimientosCronicos=padecimientosCronicos;
    };
   
   //
@@ -151,8 +152,8 @@ public ArrayList<String> getNumeroTelefonico() {
   //
   public String toString()
 	{
-		return(String.format("Nombre: %s\nCedula: %s\nEdad: %s\nCorreo electronico: %s\nLugar de residencia: %s\nNumeros Telefonicos: %s", 
-			this.nombre,this.cedula,this.edad,this.correoElectronico,this.lugarDeResidencia,this.numeroTelefonico));
+		return(String.format("Nombre: %s\nCedula: %s\nEdad: %s\nCorreo electronico: %s\nLugar de residencia: %s\nNumeros Telefonicos: %s\nPadecimientos cronicos: %s", 
+			this.nombre,this.cedula,this.edad,this.correoElectronico,this.lugarDeResidencia,this.numeroTelefonico, this.padecimientosCronicos));
 
 	}
 

@@ -11,8 +11,9 @@ abstract public class Personas {
   protected String nombre;
   protected String cedula;
   protected int edad;
-  protected String correoElectronico;
   protected ArrayList<String> numeroTelefonico;
+  protected ArrayList<String> padecimientosCronicos;
+  protected String correoElectronico;
   protected String lugarDeResidencia;
   protected SintomasCovid sintoma;
 
@@ -82,11 +83,6 @@ abstract public class Personas {
   }
 
   /**
-   * Set the value of telefonos_
-   * @param newVar the new value of telefonos_
-   */
-
-  /**
    * Set the value of correoElectronico
    * @param newVar the new value of correoElectronico
    */
@@ -147,6 +143,14 @@ abstract public class Personas {
   }
 
 
+  /**
+   * @return       int
+   */
+  public int addtelefonos()
+  {
+    return 1;
+  }
+
 
   /**
    * @return       String
@@ -194,6 +198,8 @@ abstract public class Personas {
   public ArrayList<String> getNumeroTelefonico() {
          return numeroTelefonico;
   }
-  
+  public ArrayList<String> getPadecimientosCronicos() {
+         return padecimientosCronicos;
+  }
 
 }

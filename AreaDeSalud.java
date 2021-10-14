@@ -154,22 +154,22 @@ public ArrayList<String> getNumeroTelefonico() {
 		pacientes.add(new_object);
 	}
 //Registra los pacientes positivos
-	public void registrarPacientePositivo (String nombre, String cedula,int edad,String correoElectronico,String lugarDeResidencia,String fechaAparicionSintomas,String modoDeContacto,ArrayList<String> numeroTelefonico)
+	public void registrarPacientePositivo (String nombre, String cedula,int edad,String correoElectronico,String lugarDeResidencia,String fechaAparicionSintomas,String modoDeContacto,ArrayList<String> numeroTelefonico,ArrayList<String> padecimientosCronicos)
 	{
-	    PacientePositivo nuevoPaciente = new PacientePositivo(nombre, cedula,edad,correoElectronico,lugarDeResidencia, fechaAparicionSintomas,modoDeContacto, numeroTelefonico);
+	    PacientePositivo nuevoPaciente = new PacientePositivo(nombre, cedula,edad,correoElectronico,lugarDeResidencia, fechaAparicionSintomas,modoDeContacto, numeroTelefonico,padecimientosCronicos);
       nuevoPaciente.setAreaSalud(this);
       this.addPersonas(nuevoPaciente);
 	}
 //registra las personas que se realizaron la prueba salga o no positivo
-public void registrarPaciente (String nombre, String cedula,int edad,String correoElectronico,String lugarDeResidencia,String horaDeaplicacion)
+public void registrarPaciente (String nombre, String cedula,int edad,String correoElectronico,String lugarDeResidencia,String horaDeaplicacion,ArrayList<String> numeroTelefonico,ArrayList<String> padecimientosCronicos)
 {
-    Paciente nuevoPaciente = new Paciente(nombre, cedula,edad,correoElectronico,lugarDeResidencia,horaDeaplicacion);
+    Paciente nuevoPaciente = new Paciente(nombre, cedula,edad,correoElectronico,lugarDeResidencia,horaDeaplicacion,numeroTelefonico, padecimientosCronicos);
     nuevoPaciente.setAreaSalud(this);
     this.addPersonas(nuevoPaciente);
 }
 
 //cuenta la cantidad de personas positivas en un centro en especfico
-	public Integer cantidadPositivos()
+	public Integer cantidadDePositivos()
 	{
 		int cont=0;
 		for (int x=0;x<this.pacientes.size();x++)
@@ -182,6 +182,26 @@ public void registrarPaciente (String nombre, String cedula,int edad,String corr
 
 		return cont;
 	}
+
+  
+//cuenta la cantidad de personas que se hicieron la prueba 
+public Integer cantidadDePersonasPrueba()
+{
+  int cont=0;
+  for (int x=0;x<this.pacientes.size();x++)
+  {
+    if (this.pacientes.get(x).obtenerEstado().equals("Paciente"))
+    {
+      cont++;
+    } 
+    if (this.pacientes.get(x).obtenerEstado().equals("PacientePositivo"))
+    {
+      cont++;
+    } 
+  }
+
+  return cont;
+}
 
   public String toString()
 	{

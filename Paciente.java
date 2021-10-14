@@ -10,8 +10,7 @@ public class Paciente extends Personas {
   //
   // Fields
   //
-
-  private String [] padecimientosCronicos;
+  
   private String horaDeaplicacion;
 
   public ArrayList<pruebasCOVID19> prueba = new ArrayList<>();
@@ -20,12 +19,15 @@ public class Paciente extends Personas {
   // Constructors
   //
   
-  public Paciente(String nombre, String cedula,int edad,String correoElectronico,String lugarDeResidencia, String horaDeaplicacion) {
+  public Paciente(String nombre, String cedula,int edad,String correoElectronico,String lugarDeResidencia, String horaDeaplicacion,ArrayList<String> numeroTelefonico,ArrayList<String>padecimientosCronicos) {
     this.nombre=nombre;
     this.cedula=cedula;
     this.edad=edad;
     this.correoElectronico=correoElectronico;
     this.lugarDeResidencia=lugarDeResidencia;
+    this.numeroTelefonico=numeroTelefonico;
+    this.horaDeaplicacion=horaDeaplicacion;
+    this.padecimientosCronicos=padecimientosCronicos;
     
  };
   //
@@ -36,22 +38,6 @@ public class Paciente extends Personas {
   //
   // Accessor methods
   //
-
-  /**
-   * Set the value of padecimientosCronicos_
-   * @param newVar the new value of padecimientosCronicos_
-   */
-public void setPadecimientosCronicos(String[] padecimientosCronicos) {
-       this.padecimientosCronicos = padecimientosCronicos;
-}
-
-  /**
-   * Get the value of padecimientosCronicos_
-   * @return the value of padecimientosCronicos_
-   */
-public String[] getPadecimientosCronicos() {
-       return padecimientosCronicos;
-}
 
   /**
    * Set the value of horaDeaplicacion
@@ -112,6 +98,21 @@ public ArrayList<pruebasCOVID19> getPrueba() {
 	 */
 	public AreaDeSalud getAreaSalud () {
 		return m_areaSalud;
+	}
+  public ArrayList<String> getNumeroTelefonico() {
+    
+    return getNumeroTelefonico();
+  }
+
+  public ArrayList<String> getPadecimientosCronicos() {
+         return padecimientosCronicos;
+  }
+
+  public String toString()
+	{
+		return(String.format("Nombre: %s\nCedula: %s\nEdad: %s\nCorreo electronico: %s\nLugar de residencia: %s\nNumeros Telefonicos: %s\nPadecimientos cronicos: %s\nHora de aplicacion de la vacuna: %s", 
+			this.nombre,this.cedula,this.edad,this.correoElectronico,this.lugarDeResidencia,this.numeroTelefonico, this.padecimientosCronicos, this.horaDeaplicacion));
+
 	}
 
 }

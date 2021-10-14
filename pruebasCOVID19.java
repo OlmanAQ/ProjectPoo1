@@ -18,7 +18,7 @@ public class pruebasCOVID19 {
    */
   private String nombredelPersonal;
 
-  public TiposPrueba m_tipo;
+  public tiposPrueba m_tipo;
   
   //
   // Constructors
@@ -88,7 +88,7 @@ public class pruebasCOVID19 {
    * Set the value of m_tipo
    * @param newVar the new value of m_tipo
    */
-  public void setTipo (TiposPrueba newVar) {
+  public void setTipo (tiposPrueba newVar) {
     m_tipo = newVar;
   }
 
@@ -96,7 +96,7 @@ public class pruebasCOVID19 {
    * Get the value of m_tipo
    * @return the value of m_tipo
    */
-  public TiposPrueba getTipo () {
+  public tiposPrueba getTipo () {
     return m_tipo;
   }
 
