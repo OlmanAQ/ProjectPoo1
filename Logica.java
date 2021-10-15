@@ -150,14 +150,105 @@ public class Logica {
           // Recorrer todos los centros de salud para buscar la persona por cédula
           Personas buscada = buscarPersona(cedula);
 
-          if (buscada != null) {
+          if (buscada != null) 
+          {
             System.out.print("\tnombre: " + buscada.nombre + "\n");
 
             // Se pide el sintoma de la persona
-            String sintoma = console.readLine("%s", "Simtoma que presenta: ");
-            SintomasCovid s = new SintomasCovid();
-            s.setSintoma(sintoma);
+            //String sintoma = console.readLine("%s", "Simtoma que presenta: ");
+            //SintomasCovid s = new SintomasCovid();
+            //s.setSintoma(sintoma);
 
+              while(true){
+                System.out.print("\033[H\033[2J"); 
+                System.out.println("---Sintomas Covid----");
+                System.out.println("1)Fiebre o escalofríos ");
+                System.out.println("2) Tos");
+                System.out.println("3) Dificultad para respirar");
+                System.out.println("4) Fatiga");
+                System.out.println("5) Dolores musculares y corporales");
+                System.out.println("6) Dolor de cabeza");
+                System.out.println("7) Pérdida reciente del olfato o el gusto");
+                System.out.println("8) Dolor de garganta");
+                System.out.println("9) Todos los anteriores");
+                System.out.println("10) Otro");
+                System.out.println("11) No insertar mas sintomas");
+                input=console.readLine("%s","Ingrese los sintomas que presente: ");
+                if (input.equals("1"))
+                { 
+                    SintomasCovid s = new SintomasCovid("Fiebre o escalofríos");
+                    buscada.agregar(s);
+                    System.out.print("\nSintoma agregado a paciente.\n");
+      
+                }
+                else if (input.equals("2"))
+                {    
+                  SintomasCovid s = new SintomasCovid("Tos");
+                  buscada.agregar(s);
+                  System.out.print("\nSintoma agregado a paciente.\n");
+                }
+                else if (input.equals("3"))
+                {  
+                  SintomasCovid s = new SintomasCovid("Dificultad para respirar");
+                  buscada.agregar(s);
+                  System.out.print("\nSintoma agregado a paciente.\n");
+                  
+                }
+                else if (input.equals("4"))
+                {    
+                  SintomasCovid s = new SintomasCovid("Fatiga");
+                  buscada.agregar(s);
+                  System.out.print("\nSintoma agregado a paciente.\n");
+                }
+                else if (input.equals("5"))
+                {    
+                    SintomasCovid s = new SintomasCovid("Dolores musculares y corporales");
+                    buscada.agregar(s);
+                    System.out.print("\nSintoma agregado a paciente.\n");
+                }
+                else if (input.equals("6"))
+                {    
+                    SintomasCovid s= new SintomasCovid("Dolor de cabeza");
+                    buscada.agregar(s);
+                    System.out.print("\nSintoma agregado a paciente.\n"); 
+                }
+                else if (input.equals("7"))
+                {   
+                    SintomasCovid s= new SintomasCovid("Pérdida reciente del olfato o el gusto");
+                    buscada.agregar(s);
+                    System.out.print("\nSintoma agregado a paciente.\n");
+                }
+                else if (input.equals("8"))
+                {   
+                    SintomasCovid s= new SintomasCovid("Dolor de garganta");
+                    buscada.agregar(s);
+                    System.out.print("\nSintoma agregado a paciente.\n");
+                }
+                else if (input.equals("9"))
+                {    
+                    SintomasCovid s= new SintomasCovid("Fiebre o escalofríos, Tos, Dificultad para respirar, Fatiga, Dolores musculares y corporales, Dolor de cabeza,Pérdida reciente del olfato o el gusto,Dolor de garganta");
+                    buscada.agregar(s);
+                    System.out.print("\nSintoma agregado a paciente.\n");
+                
+                }
+                else if (input.equals("10"))
+                {    
+                  
+                    String sin=console.readLine("%s","Sintoma: ");
+                    SintomasCovid sintoma= new SintomasCovid(sin);
+                    buscada.agregar(sintoma);
+                    System.out.print("\nSintoma agregado a paciente.\n");
+                
+                }
+                
+                
+                else if (input.equals("11"))
+                {
+                  break;
+                }
+                
+              }
+            
             // Infeccion
             System.out.print("\n Datos de la infección: \n");
             String f_contagio = console.readLine("%s", "\tfecha de contagio: ");
@@ -195,14 +286,23 @@ public class Logica {
             Infecciones i = new Infecciones(f_contagio, f_alta, descripcion, o);
 
             // Agregar infeccion a sintomas covid
-            s.setInfeccion(i);
+           // s.setInfeccion(i);
+
+
+
 
             // agrega sintoma a la perona
-            buscada.setSintoma(s);
-            System.out.print("\nSintoma agregado a paciente. Precione una tecla para volver.\n");
+           // buscada.setSintoma(s);
+            //System.out.print("\nSintoma agregado a paciente. Precione una tecla para volver.\n");
 
-            break;
-          } else {
+
+
+
+
+
+          break;
+        } 
+          else {
             System.out.print("\nNo existe una persona con esa cedula. Vuelva a intentar.\n");
           }
         }
@@ -219,7 +319,7 @@ public class Logica {
 
       else if (input.equals("10")) {
         // reporte 3
-        reporte3();
+        //reporte3();
         input = console.readLine("");
       }
 
@@ -559,7 +659,7 @@ public class Logica {
     return null;
   }
 
-  public void reporte3() {
+ /* public void reporte3() {
 
     System.out.print("\nReporte 3: Cantidad de ordenes sanitarias por Area de salud\n\n");
     // recorre los centros de salud para buscar a la persona.
@@ -580,6 +680,19 @@ public class Logica {
       }
       System.out.print("\ttotal: " + contador + "\n");
     }
+  }*/
+
+  public void imprimirPersona(String cedula){
+    Personas buscada = buscarPersona(cedula);
+          if (buscada != null) {
+            System.out.print("\tNombre: " + buscada.nombre + "\n");
+            System.out.print("\tCedula: " + buscada.cedula + "\n");
+            System.out.print("\tCorreo Electronico: " + buscada.correoElectronico + "\n");
+            System.out.print("\tEdad " + String.valueOf(buscada.edad) + "\n");
+            System.out.print("\t:Lugar de residencia:" + buscada.lugarDeResidencia + "\n");
+            System.out.print("\t:Sintomas: " + buscada.sintoma + "\n");
+            
   }
 
+}
 }
