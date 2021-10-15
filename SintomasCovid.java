@@ -15,9 +15,7 @@ public class SintomasCovid {
   //
   // Constructors
   //
-  public SintomasCovid (String sintoma) {
-    this.sintoma=sintoma;
-   };
+  public SintomasCovid () { };
   
   //
   // Methods

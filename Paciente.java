@@ -19,7 +19,7 @@ public class Paciente extends Personas {
   // Constructors
   //
   
-  public Paciente(String nombre, String cedula,int edad,String correoElectronico,String lugarDeResidencia, String horaDeaplicacion, ArrayList<String> numeroTelefonico,ArrayList<String>padecimientosCronicos) {
+  public Paciente(String nombre, String cedula,int edad,String correoElectronico,String lugarDeResidencia, String horaDeaplicacion,ArrayList<String> numeroTelefonico,ArrayList<String>padecimientosCronicos) {
     this.nombre=nombre;
     this.cedula=cedula;
     this.edad=edad;
