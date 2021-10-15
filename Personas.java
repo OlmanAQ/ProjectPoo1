@@ -15,7 +15,7 @@ abstract public class Personas {
   protected ArrayList<String> padecimientosCronicos;
   protected String correoElectronico;
   protected String lugarDeResidencia;
-  protected SintomasCovid sintoma;
+  protected ArrayList<SintomasCovid> sintoma;
 
   public AreaDeSalud m_areaSalud;
   
@@ -114,21 +114,15 @@ abstract public class Personas {
     return lugarDeResidencia;
   }
 
-  /**
-   * Set the value of sintoma
-   * @param newVar the new value of sintoma
-   */
-  public void setSintoma (SintomasCovid newVar) {
-    sintoma = newVar;
+  public ArrayList<SintomasCovid> getSintoma() {
+         return sintoma;
   }
 
-  /**
-   * Get the value of sintoma
-   * @return the value of sintoma
-   */
-  public SintomasCovid getSintoma () {
-    return sintoma;
+  public void setSintoma(ArrayList<SintomasCovid> sintoma) {
+         this.sintoma = sintoma;
   }
+
+  
 
   //
   // Other methods
@@ -200,6 +194,12 @@ abstract public class Personas {
   }
   public ArrayList<String> getPadecimientosCronicos() {
          return padecimientosCronicos;
+  }
+
+  public void agregar(SintomasCovid sintomas){
+       
+    sintoma.add(sintomas);
+    
   }
 
 }
