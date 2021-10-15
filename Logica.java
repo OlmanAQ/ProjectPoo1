@@ -11,6 +11,48 @@ public class Logica
     String input="";
     Console console = System.console();
 
+    public Logica ()
+    {
+        registrosIniciales();
+    }
+    private void registrosIniciales ()
+    {
+
+        AreaDeSalud nuevaAreaSalud;
+        ArrayList<String> telefonos = new ArrayList<String>(); // Create an ArrayList object
+        telefonos.add("2475-7575");
+        nuevaAreaSalud = new AreaDeSalud("Ciudad Quesada", "Amaya Durán", "Ciudad Quesada centro", "San MArtín, Barrio Lourdes, El carmen, El campo, ...", telefonos );
+
+        ArrayList<String> padecimientosPP1A1 = new ArrayList<String>(); // Create an ArrayList object
+        ArrayList<String> telefonosPP1A1 = new ArrayList<String>(); // Create an ArrayList object
+        telefonosPP1A1.add("8895-3002");
+        padecimientosPP1A1.add("nada");
+        nuevaAreaSalud.registrarPacientePositivo("José Leonardo Víquez Acuña", "2-0562-0727", 40, "leoviquez@gmail.com", "Barrio el Carmen", "08-10-2021",  "Ninguno",  telefonosPP1A1, padecimientosPP1A1);
+
+        ArrayList<String> padecimientosPP2A1 = new ArrayList<String>(); // Create an ArrayList object
+        ArrayList<String> telefonosPP2A1= new ArrayList<String>(); // Create an ArrayList object
+        telefonosPP2A1.add("8895-3002");
+        padecimientosPP2A1.add("nada");
+        nuevaAreaSalud.registrarPacientePositivo("Andrea Vizcaino", "2-0000-0001", 30, "Andrea@gmail.com", "San MArtín", "08-08-2021", "Ninguno", telefonosPP2A1, padecimientosPP2A1);
+        ArrayList<String> padecimientosPP3A1 = new ArrayList<String>(); // Create an ArrayList object
+        ArrayList<String> telefonosPP3A1 = new ArrayList<String>(); // Create an ArrayList object
+        telefonosPP3A1.add("2461-0000");
+        padecimientosPP3A1.add("Ninguno");
+        nuevaAreaSalud.registrarPacientePositivo("Ricardo Avendaño","2-0000-0002", 27, "Ricardo@gmail.com","Centro Ciudad Quesada", "01-07-2021", "Ninguno", telefonosPP3A1, padecimientosPP3A1 );
+        //nuevaAreaSalud.registrarPaciente();
+        this.listadoAreas.add(nuevaAreaSalud);
+
+
+        /*
+        nuevaAreaSalud = new AreaDeSalud("Florencia", "Carlo Méndez", "Florencia centro", "Centro florencia Florencia, caimitos, cementerio, ...", telefonosA1 );
+        nuevaAreaSalud = new AreaDeSalud("", "", "", "areaSaludFlorencia@ccss.go.cr", "", "");
+        nuevaAreaSalud.addPersonas(new PacientesPositivos("2-0000-0003", "María Méndez", (short)55, "Ninguno", "Florencia", "2475-0000", "leoviquez@gmail.com", "01-01-2021"));
+        nuevaAreaSalud.addPersonas(new PacientesPositivos("2-0000-0004", "Andrea Vizcaino", (short)20, "Ninguno", "Caimitos", "2475-0001", "Andrea@gmail.com", "31-12-2020"));
+        nuevaAreaSalud.addPersonas(new PacientesPositivos("2-0000-0006", "Pedro Montaner", (short)12, "Ninguno", "Cuestillas", "2475-0002", "pedro@gmail.com", "25-12-2020"));
+        this.listadoAreas.add(nuevaAreaSalud);
+        */
+    }
+
     public void menuPrincipal()
     {
 
