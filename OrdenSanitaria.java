@@ -11,18 +11,35 @@ public class OrdenSanitaria {
   // Fields
   //
 
+  /**
+   * La fecha de emision de la orden
+   */
   private String fechaDeEmision;
+  /**Fecha de finalizacion de la orden*/
   private String fechaDeFinalizacion;
+  /**Motivo de la orden*/
   private String motivo;
+  /**Nombre del funcionario*/
   private String nombreDelFuncionario;
+  /**Contactos del paciente*/
   private Contactos contacto;
+  /**El paciente positivo de la orden */
   private PacientePositivo pacientePositivo;
-
-  public Vector AmpliacionVector = new Vector();
+  /**Vector para la amplicion de la orden sanitaria */
+  public Vector<AmpliacionDeOrdenSanitaria> AmpliacionVector = new Vector<AmpliacionDeOrdenSanitaria>();
   
   //
   // Constructors
   //
+  /**
+   * Contructor de orden sanitaria
+   * @param fechaDeEmision
+   * @param fechaDeFinalizacion
+   * @param motivo
+   * @param nombreDelFuncionario
+   * @param contacto
+   * @param pacientePositivo
+   */
   public OrdenSanitaria (String fechaDeEmision, String fechaDeFinalizacion, String motivo, String nombreDelFuncionario, Contactos contacto, PacientePositivo pacientePositivo) 
   {
     this.fechaDeEmision= fechaDeEmision;
@@ -45,24 +62,24 @@ public class OrdenSanitaria {
   //
 
   /**
-   * Set the value of fechaDeEmision
-   * @param newVar the new value of fechaDeEmision
+   * Set de la fechaDeEmision
+   * @param newVar (String) fechaDeEmision
    */
   public void setFechaDeEmision (String newVar) {
     fechaDeEmision = newVar;
   }
 
   /**
-   * Get the value of fechaDeEmision
-   * @return the value of fechaDeEmision
+   * Get de la fechaDeEmision
+   * @return (String) la fechaDeEmision
    */
   public String getFechaDeEmision () {
     return fechaDeEmision;
   }
 
   /**
-   * Set the value of fechaDeFinalizacion
-   * @param newVar the new value of fechaDeFinalizacion
+   * Set de la fechaDeFinalizacion
+   * @param newVar (String) fechaDeFinalizacion de la orden
    */
   public void setFechaDeFinalizacion (String newVar) {
     fechaDeFinalizacion = newVar;
@@ -77,7 +94,7 @@ public class OrdenSanitaria {
   }
 
   /**
-   * Set the value of motivo
+   * Set asinga el motivo de Orden
    * @param newVar the new value of motivo
    */
   public void setMotivo (String newVar) {
@@ -169,7 +186,8 @@ public class OrdenSanitaria {
   //
 
   /**
-   * @return       int
+   * Reporte de Cantidad Ordenes por area
+   * @return int
    */
   public int cantidadOrdenesArea()
   {

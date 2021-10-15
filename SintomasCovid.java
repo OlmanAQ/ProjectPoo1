@@ -8,13 +8,18 @@ public class SintomasCovid {
   //
   // Fields
   //
-
+  /**Nombre del sintoma */
   private String sintoma;
+  /**La infeccion relaciona con los sintomas */
   private Infecciones infeccion;
   
   //
   // Constructors
   //
+  
+  /** 
+   *Contructor de Sintomas
+  */
   public SintomasCovid (String sintoma) {
     this.sintoma=sintoma;
    };

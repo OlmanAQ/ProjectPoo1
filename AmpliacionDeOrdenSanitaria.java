@@ -10,16 +10,25 @@ public class AmpliacionDeOrdenSanitaria {
   //
   // Fields
   //
-
+  /**La nueva fecha de la orden */
   private String nuevafechaInicio;
+  /**La nueva fecha de finalizacion de la orden */
   private String nuevaFechaFinalizacion;
+  /**El motivo de la orden */
   private String motivo;
-
+  /**La orden sanitaria a ampliar */
   public OrdenSanitaria m_orden;
   
   //
   // Constructors
   //
+  /**
+   * Contructor de ampliciacion de orden sanitaria
+   * @param nuevafechaInicio
+   * @param nuevaFechaFinalizacion
+   * @param motivo
+   * @param m_orden
+   */
   public AmpliacionDeOrdenSanitaria (String nuevafechaInicio, String nuevaFechaFinalizacion, String motivo, OrdenSanitaria m_orden) 
   {
     this.nuevafechaInicio=nuevafechaInicio;

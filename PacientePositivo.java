@@ -1,3 +1,10 @@
+/** 
+ * Describe las características y metodos de un objeto paciente
+ * @author Kevelyn Yuliana Gonzales Paizano 
+ * @author Olman Alonso Acuña Quesada 
+ * @author Deyanira Maradiaga Villagra 
+ * 
+*/
 import java.util.ArrayList;
 
 //import java.util.*;
@@ -8,9 +15,7 @@ import java.util.ArrayList;
  */
 public class PacientePositivo extends Personas {
 
-  //
-  // Fields
-  //
+ 
 
   /**
    * fecha de aparicion de sintomas
@@ -24,6 +29,18 @@ public class PacientePositivo extends Personas {
   //
   // Constructors
   //
+  /**
+   * 
+   * @param nombre
+   * @param cedula
+   * @param edad
+   * @param correoElectronico
+   * @param lugarDeResidencia
+   * @param fechaAparicionSintomas
+   * @param modoDeContacto
+   * @param numeroTelefonico
+   * @param padecimientosCronicos
+   */
   public PacientePositivo(String nombre, String cedula,int edad,String correoElectronico,String lugarDeResidencia,String fechaAparicionSintomas,String modoDeContacto,ArrayList<String> numeroTelefonico,ArrayList<String>padecimientosCronicos) {
       this.nombre=nombre;
       this.cedula=cedula;
@@ -39,11 +56,6 @@ public class PacientePositivo extends Personas {
   // Methods
   //
 
-
-  //
-  // Accessor methods
-  //
-
   /**
    * Set the value of fechaAparicionSintomas
    * fecha de aparicion de sintomas
@@ -53,6 +65,8 @@ public class PacientePositivo extends Personas {
     fechaAparicionSintomas = newVar;
   }
 
+ //*************************Getter's********************************
+    
   /**
    * Get the value of fechaAparicionSintomas
    * fecha de aparicion de sintomas
@@ -61,7 +75,15 @@ public class PacientePositivo extends Personas {
   public String getFechaAparicionSintomas () {
     return fechaAparicionSintomas;
   }
-
+   /**
+   * Get the value of modoDeContacto
+   * @return the value of modoDeContacto
+   */
+  public String getModoDeContacto () {
+    return modoDeContacto;
+  }
+ //*************************Setter's********************************
+    
   /**
    * Set the value of modoDeContacto
    * @param newVar the new value of modoDeContacto
@@ -70,13 +92,7 @@ public class PacientePositivo extends Personas {
     modoDeContacto = newVar;
   }
 
-  /**
-   * Get the value of modoDeContacto
-   * @return the value of modoDeContacto
-   */
-  public String getModoDeContacto () {
-    return modoDeContacto;
-  }
+ 
 
   /**
    * Add a Infeccion object to the infeccionVector List
@@ -141,7 +157,9 @@ public class PacientePositivo extends Personas {
 		return m_areaSalud;
 	}
 
-
+/**
+ * Saca la lista de numeros de telefonicos
+ */
 public ArrayList<String> getNumeroTelefonico() {
  
   return getNumeroTelefonico();
@@ -150,6 +168,9 @@ public ArrayList<String> getNumeroTelefonico() {
   //
   // Other methods
   //
+  /**
+   * Imprime los atributos de paciente
+   */
   public String toString()
 	{
 		return(String.format("Nombre: %s\nCedula: %s\nEdad: %s\nCorreo electronico: %s\nLugar de residencia: %s\nNumeros Telefonicos: %s\nPadecimientos cronicos: %s", 

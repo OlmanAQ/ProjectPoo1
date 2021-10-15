@@ -17,6 +17,15 @@ public class Contactos extends Personas {
   //
   // Constructors
   //
+  /**
+   * Constructor de Contactos
+   * @param nombre
+   * @param cedula
+   * @param edad
+   * @param correoElectronico
+   * @param lugarDeResidencia
+   * @param gradodeContacto
+   */
   public Contactos (String nombre, String cedula,int edad,String correoElectronico,String lugarDeResidencia, String gradodeContacto) 
   {
     this.nombre=nombre;

@@ -2,8 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d8564b18-8b39-405a-b848-3ed482e6ed36" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AmpliacionDeOrdenSanitaria.java" beforeDir="false" afterPath="$PROJECT_DIR$/AmpliacionDeOrdenSanitaria.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AreaDeSalud.java" beforeDir="false" afterPath="$PROJECT_DIR$/AreaDeSalud.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Contactos.java" beforeDir="false" afterPath="$PROJECT_DIR$/Contactos.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Logica.java" beforeDir="false" afterPath="$PROJECT_DIR$/Logica.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/OrdenSanitaria.java" beforeDir="false" afterPath="$PROJECT_DIR$/OrdenSanitaria.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PruebasCOVID19.java" beforeDir="false" afterPath="$PROJECT_DIR$/PruebasCOVID19.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SintomasCovid.java" beforeDir="false" afterPath="$PROJECT_DIR$/SintomasCovid.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -23,19 +29,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-  </component>
-  <component name="RunManager">
-    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
-      <option name="arquillianRunConfiguration">
-        <value>
-          <option name="containerStateName" value="" />
-        </value>
-      </option>
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">

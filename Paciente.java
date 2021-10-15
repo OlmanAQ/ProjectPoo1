@@ -1,3 +1,10 @@
+/** 
+ * Describe las características y metodos de un objeto paciente
+ * @author Kevelyn Yuliana Gonzales Paizano 
+ * @author Olman Alonso Acuña Quesada 
+ * @author Deyanira Maradiaga Villagra 
+ * 
+*/
 
 import java.util.*;
 
@@ -7,18 +14,27 @@ import java.util.*;
  */
 public class Paciente extends Personas {
 
-  //
-  // Fields
-  //
-  
-  private String horaDeaplicacion;
+  //Espacio para definicion de atributos 
 
+  /**Hora de aplicación de la prueba */
+  private String horaDeaplicacion;
+  /**Lista de arreglos que almacena las pruebas */
   public ArrayList<PruebasCOVID19> prueba = new ArrayList<>();
   
   //
   // Constructors
   //
-  
+  /**
+   * Constructor de Paciente
+   * @param nombre
+   * @param cedula
+   * @param edad
+   * @param correoElectronico
+   * @param lugarDeResidencia
+   * @param horaDeaplicacion
+   * @param numeroTelefonico
+   * @param padecimientosCronicos
+   */
   public Paciente(String nombre, String cedula,int edad,String correoElectronico,String lugarDeResidencia, String horaDeaplicacion, ArrayList<String> numeroTelefonico,ArrayList<String>padecimientosCronicos) {
     this.nombre=nombre;
     this.cedula=cedula;
@@ -30,15 +46,14 @@ public class Paciente extends Personas {
     this.padecimientosCronicos=padecimientosCronicos;
     
  };
-  //
-  // Methods
-  //
+  //Espacio de metodos
 
-
-  //
-  // Accessor methods
-  //
-
+    //*************************Getter's********************************
+    
+    /**
+     * Getter  de la hora de la prueba 
+     * @return ()   */ 
+  
   /**
    * Set the value of horaDeaplicacion
    * @param newVar the new value of horaDeaplicacion
@@ -87,7 +102,12 @@ public ArrayList<PruebasCOVID19> getPrueba() {
   {
     return "";
   }
-  
+  //*************************Setter's********************************
+
+    /**
+     * Setter Asigna el area de salud
+     * @param newVar nueva area 
+     */  
 	public void setAreaSalud (AreaDeSalud newVar) {
 		m_areaSalud = newVar;
 	}
@@ -99,15 +119,20 @@ public ArrayList<PruebasCOVID19> getPrueba() {
 	public AreaDeSalud getAreaSalud () {
 		return m_areaSalud;
 	}
+  /**
+   * Saca lista de telefonos
+   */
   public ArrayList<String> getNumeroTelefonico() {
     
     return getNumeroTelefonico();
   }
-
+  /**
+   *Saca padecimientos del paciente
+   */
   public ArrayList<String> getPadecimientosCronicos() {
          return padecimientosCronicos;
   }
-
+  /**Imprime los atributos de la clase */
   public String toString()
 	{
 		return(String.format("Nombre: %s\nCedula: %s\nEdad: %s\nCorreo electronico: %s\nLugar de residencia: %s\nNumeros Telefonicos: %s\nPadecimientos cronicos: %s\nHora de aplicacion de la vacuna: %s", 

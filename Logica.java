@@ -2,14 +2,20 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Vector;
 import java.io.Console;
-
+/**
+ * Class Logica
+ * @author Olman Acuña Quesada
+ * @OlmanAQ
+ * @author Deyanira
+ * @author Kevelin
+ */
 public class Logica {
   public Vector<AreaDeSalud> listadoAreas = new Vector<AreaDeSalud>();
   public Vector<PacientePositivo> ListaPacientePositivo = new Vector<PacientePositivo>();
 
   String input = "";
   Console console = System.console();
-
+    
   public Logica() {
     registrosIniciales();
   }
@@ -106,10 +112,10 @@ public class Logica {
       System.out.println("3) Registrar un nuevo paciente prueba");
       System.out.println("4) Cantidad de pacientes positivos por área de salud");
       System.out.println("5) Cantidad de pacientes que se realizaron la prueba por área de salud");
-      System.out.println("6) Imprimir centros de salud y personas");
+      System.out.println("6) Imprimir centros de salud");
       System.out.println("7) Agregar sintoma a persona");
       System.out.println("8) Reporte 1");
-      System.out.println("9) Reporte 2");
+      System.out.println("9) Imprimir datos de personas");
       System.out.println("10) reporte 3: Calcular total de ordenes sanitarias");
       System.out.println("11) Salir ");
       input = console.readLine("%s", "Que acción desea realizar: ");
@@ -314,7 +320,8 @@ public class Logica {
       }
 
       else if (input.equals("9")) {
-
+          String cedula = console.readLine("Digite la cedula: ");
+          imprimirPersona(cedula);
       }
 
       else if (input.equals("10")) {
@@ -619,28 +626,7 @@ public class Logica {
       System.out.println("*******************************************************");
     }
 
-    System.out.println("--------------Pacientes positivos-------------");
-    System.out.println("*******************************************************");
-    for (int i = 0; i < ListaPacientePositivo.size(); i++) {
-      System.out.println(String.format("%d) %s", i, ListaPacientePositivo.get(i).getNombre()));
-    }
-
-    int n = -1;
-    PacientePositivo as;
-    while (true) {
-      try {
-        nas = Integer.parseInt(console.readLine("%s", "Número de persona: "));
-        as = ListaPacientePositivo.get(n);
-        break;
-      } catch (Exception e) {
-        System.out.println("Seleccione un número de persona válido...");
-      }
-    }
-    System.out.println(as.toString());
-
-    if (ListaPacientePositivo.size() == 0) {
-      System.out.println("No hay datos en la lista de pacientes positivos");
-    }
+    
     input = console.readLine("");
   }
 
@@ -691,8 +677,11 @@ public class Logica {
             System.out.print("\tEdad " + String.valueOf(buscada.edad) + "\n");
             System.out.print("\t:Lugar de residencia:" + buscada.lugarDeResidencia + "\n");
             System.out.print("\t:Sintomas: " + buscada.sintoma + "\n");
+            System.out.print("\t:Padecimientos Cronicos: " + buscada.padecimientosCronicos+"\n");
+            System.out.print("\t:Telefonos: " + buscada.numeroTelefonico+"\n");
             
   }
+  
 
 }
 }

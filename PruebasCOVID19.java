@@ -10,19 +10,23 @@ public class PruebasCOVID19 {
   //
   // Fields
   //
-
+  /**Dia de la aplicion de prueba */
   private String diaDeAplicacion;
+  /**Hora de la aplicacion de la prueba */
   private String horaDeAplicacion;
   /**
    * nombre del personal de salud que realizo la prueba
    */
   private String nombredelPersonal;
-
+  /**El tipo de la prueba */
   public TiposPrueba m_tipo;
   
   //
   // Constructors
   //
+  /**
+   * Contructor
+   */
   public PruebasCOVID19 () { };
   
   //
